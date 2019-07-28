@@ -274,7 +274,6 @@
 		0401DD2D22ECA1EF00EC4342 /* Album List */ = {
 			isa = PBXGroup;
 			children = (
-				040DEEBE22EE0D7300B8BD0A /* Album Detail */,
 				040DEE6922EDC81400B8BD0A /* AlbumListAssembly.swift */,
 				040DEE6A22EDC81400B8BD0A /* AlbumListInteractor.swift */,
 				040DEE6D22EDC81400B8BD0A /* AlbumListPresenter.swift */,
@@ -386,13 +385,6 @@
 				040DEE8B22EDF2E900B8BD0A /* TooManyRequestsError.swift */,
 			);
 			path = Errors;
-			sourceTree = "<group>";
-		};
-		040DEEBE22EE0D7300B8BD0A /* Album Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Album Detail";
 			sourceTree = "<group>";
 		};
 		465CF5C8E088F10D0BB28A09 /* Pods */ = {
