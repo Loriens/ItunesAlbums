@@ -12,6 +12,7 @@ protocol AlbumListViewInput: ViperViewInput { }
 
 protocol AlbumListViewOutput: ViperViewOutput {
     func loadAlbums(text: String)
+    func select(album: Album)
 }
 
 class AlbumListViewController: ViperViewController, AlbumListViewInput {
@@ -101,6 +102,10 @@ extension AlbumListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
         return interItemSpacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.output?.select(album: self.albumCellModels[indexPath.row].album)
     }
     
 }

@@ -8,7 +8,9 @@
 
 import GKViper
 
-protocol AlbumListRouterInput: ViperRouterInput { }
+protocol AlbumListRouterInput: ViperRouterInput {
+    func pushAlbumDetailViewController(album: Album) -> AlbumDetailPresenterInput
+}
 
 class AlbumListRouter: ViperRouter, AlbumListRouterInput {
     
@@ -21,6 +23,15 @@ class AlbumListRouter: ViperRouter, AlbumListRouterInput {
     }
     
     // MARK: - AlbumListRouterInput
+    func pushAlbumDetailViewController(album: Album) -> AlbumDetailPresenterInput {
+        let vc = AlbumDetailAssembly.create()
+        let moduleInput = AlbumDetailAssembly.configure(with: vc)
+        moduleInput.configure(with: album)
+        
+        self.push(to: vc, animated: true)
+        
+        return moduleInput
+    }
     
     // MARK: - Module functions
 }
