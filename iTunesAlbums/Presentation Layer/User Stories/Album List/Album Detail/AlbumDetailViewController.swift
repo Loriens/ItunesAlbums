@@ -7,6 +7,7 @@
 //
 
 import GKViper
+import NVActivityIndicatorView
 
 protocol AlbumDetailViewInput: ViperViewInput { }
 
@@ -18,6 +19,7 @@ class AlbumDetailViewController: ViperViewController, AlbumDetailViewInput {
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var albumName: UILabel!
     @IBOutlet private weak var albumImage: UIImageView!
+    @IBOutlet private weak var activityIndicatorView: NVActivityIndicatorView!
     
     // MARK: - Props
     fileprivate var output: AlbumDetailViewOutput? {
@@ -43,6 +45,9 @@ class AlbumDetailViewController: ViperViewController, AlbumDetailViewInput {
         self.tableView.rowHeight = UITableView.automaticDimension
         self.tableView.estimatedRowHeight = 62.0
         self.tableView.separatorStyle = .none
+        
+        self.activityIndicatorView.type = .ballClipRotatePulse
+        self.activityIndicatorView.color = AppTheme.backgroundBar
     }
     
     func setupActions() { }
@@ -73,6 +78,18 @@ class AlbumDetailViewController: ViperViewController, AlbumDetailViewInput {
         self.songCellModels = model.songs.map({ SongTableCellModel(song: $0) })
         DispatchQueue.main.async {
             self.tableView.reloadData()
+        }
+    }
+    
+    override func beginLoading() {
+        super.beginLoading()
+        self.activityIndicatorView.startAnimating()
+    }
+    
+    override func finishLoading(with error: Error?) {
+        super.finishLoading(with: error)
+        DispatchQueue.main.async {
+            self.activityIndicatorView.stopAnimating()
         }
     }
     

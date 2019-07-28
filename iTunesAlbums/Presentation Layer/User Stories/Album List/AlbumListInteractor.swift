@@ -36,12 +36,14 @@ open class AlbumListInteractor: ViperInteractor, AlbumListInteractorInput {
     func loadAlbums(text: String) {
         guard let request = AlbumRemoteRouter.list(text: text).request else { return }
         
+        self.output?.beginLoading()
         let _: GetAlbumsResponseModel? = self.execute(request, onSuccess: self.loadAlbumsSuccess, onError: self.loadAlbumsError)
     }
     
     // MARK: - Module functions
     func loadAlbumsSuccess(result: GetAlbumsResponseModel?, response: URLResponse?) {
         self.output?.loadAlbumsSuccess(result?.results ?? [])
+        self.output?.finishLoading(with: nil)
     }
     
     private func loadAlbumsError(error: Error?, response: URLResponse?) {

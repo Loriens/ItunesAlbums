@@ -7,6 +7,7 @@
 //
 
 import GKViper
+import NVActivityIndicatorView
 
 protocol AlbumListViewInput: ViperViewInput { }
 
@@ -20,6 +21,7 @@ class AlbumListViewController: ViperViewController, AlbumListViewInput {
     // MARK: - Outlets
     @IBOutlet private weak var searchBar: UISearchBar!
     @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var activityIndicatorView: NVActivityIndicatorView!
     
     // MARK: - Props
     fileprivate var output: AlbumListViewOutput? {
@@ -49,6 +51,9 @@ class AlbumListViewController: ViperViewController, AlbumListViewInput {
         self.collectionView.delegate = self
         self.collectionView.dataSource = self
         self.collectionView.registerCellNib(AlbumCollectionViewCell.self)
+        
+        self.activityIndicatorView.type = .ballClipRotatePulse
+        self.activityIndicatorView.color = AppTheme.backgroundBar
     }
     
     func setupActions() { }
@@ -68,6 +73,18 @@ class AlbumListViewController: ViperViewController, AlbumListViewInput {
         self.albumCellModels = model.albums.map({ AlbumCollectionCellModel(album: $0) })
         DispatchQueue.main.async {
             self.collectionView.reloadData()
+        }
+    }
+    
+    override func beginLoading() {
+        super.beginLoading()
+        self.activityIndicatorView.startAnimating()
+    }
+    
+    override func finishLoading(with error: Error?) {
+        super.finishLoading(with: error)
+        DispatchQueue.main.async {
+            self.activityIndicatorView.stopAnimating()
         }
     }
     

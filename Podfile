@@ -11,7 +11,7 @@ target 'iTunesAlbums' do
   # https://github.com/GrumpyKir/GKViper
   pod 'GKViper', '0.4.6'
 
-  # https://github.com/scalessec/Toast-Swift
-  pod 'Toast-Swift', '~> 5.0.0'
+  # https://github.com/ninjaprox/NVActivityIndicatorView
+  pod 'NVActivityIndicatorView', '~> 4.7.0'
 
 end

@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AlbumDetailViewController" customModule="iTunesAlbums" customModuleProvider="target">
             <connections>
+                <outlet property="activityIndicatorView" destination="q4M-O1-Db8" id="mlU-XU-X9i"/>
                 <outlet property="albumImage" destination="epz-YB-Th7" id="Isg-Sn-EdG"/>
                 <outlet property="albumName" destination="rr2-g3-31u" id="Jpr-mS-DFr"/>
                 <outlet property="tableView" destination="WBE-ro-hHa" id="8Vw-84-zKS"/>
@@ -40,6 +41,14 @@
                     <rect key="frame" x="16" y="240.5" width="343" height="394.5"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q4M-O1-Db8" customClass="NVActivityIndicatorView" customModule="NVActivityIndicatorView">
+                    <rect key="frame" x="165.5" y="416" width="44" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="Okf-W0-GHU"/>
+                        <constraint firstAttribute="width" constant="44" id="jwq-PH-suv"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -50,7 +59,9 @@
                 <constraint firstItem="rr2-g3-31u" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="RgK-wS-ZJN"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="WBE-ro-hHa" secondAttribute="bottom" constant="32" id="SzM-hr-hEm"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="WBE-ro-hHa" secondAttribute="trailing" constant="16" id="YVM-xr-V0K"/>
+                <constraint firstItem="q4M-O1-Db8" firstAttribute="centerX" secondItem="WBE-ro-hHa" secondAttribute="centerX" id="ZVV-9o-e0S"/>
                 <constraint firstItem="WBE-ro-hHa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="aH3-UM-lvP"/>
+                <constraint firstItem="q4M-O1-Db8" firstAttribute="centerY" secondItem="WBE-ro-hHa" secondAttribute="centerY" id="p8l-US-Pj9"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rr2-g3-31u" secondAttribute="trailing" constant="16" id="s5s-uA-w9q"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>

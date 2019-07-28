@@ -5,33 +5,31 @@ PODS:
   - GKViper (0.4.6):
     - GKExtensions (~> 1.0.0)
     - GKNetwork (~> 0.5.4)
-  - IQKeyboardManager (6.4.0)
   - Kingfisher (5.7.0)
-  - Toast-Swift (5.0.0)
+  - NVActivityIndicatorView (4.7.0):
+    - NVActivityIndicatorView/Presenter (= 4.7.0)
+  - NVActivityIndicatorView/Presenter (4.7.0)
 
 DEPENDENCIES:
   - GKViper (= 0.4.6)
-  - IQKeyboardManager
   - Kingfisher (~> 5.7.0)
-  - Toast-Swift (~> 5.0.0)
+  - NVActivityIndicatorView (~> 4.7.0)
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - GKExtensions
     - GKNetwork
     - GKViper
-    - IQKeyboardManager
     - Kingfisher
-    - Toast-Swift
+    - NVActivityIndicatorView
 
 SPEC CHECKSUMS:
   GKExtensions: 179829256c98f9e23a8101181ebd90ff6c2c463e
   GKNetwork: 5f674b710f80d4f9dfee8c5caf713ced2dabf982
   GKViper: 8d0b91fd8696bd97a862e249356a44a96d34bc20
-  IQKeyboardManager: fcef267266379c003181fc3592f6bdb8bf4db839
   Kingfisher: c7d211b54f1f30d8060aadab177d52b4349c825b
-  Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
+  NVActivityIndicatorView: b19ddab2576f805cbe0fb2306cba3476e09a1dea
 
-PODFILE CHECKSUM: 8da44f249e955dcd823fda941fcde51874eca219
+PODFILE CHECKSUM: a51c0a2c7b5e3a5b02e8f83f1e5e375e933a0b98
 
 COCOAPODS: 1.6.1
