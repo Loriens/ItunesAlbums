@@ -46,6 +46,10 @@ open class AlbumListInteractor: ViperInteractor, AlbumListInteractorInput {
     
     private func loadAlbumsError(error: Error?, response: URLResponse?) {
         self.output?.loadAlbumsError()
-        self.output?.finishLoading(with: error)
+        guard let response = response as? HTTPURLResponse else {
+            self.output?.finishLoading(with: error)
+            return
+        }
+        self.output?.finishLoading(with: ServerError(response: response))
     }
 }
