@@ -27,3 +27,4 @@
 
 // MARK: - Ошибки
 "ErrorRequestLimit" = "Too many requests. Please, wait";
+"InternetConnectionError" = "The Internet connection appears to be offline.";

@@ -62,6 +62,9 @@
 		040DEEB922EE024D00B8BD0A /* SongTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 040DEEB722EE024D00B8BD0A /* SongTableViewCell.xib */; };
 		040DEEBB22EE025700B8BD0A /* SongTableCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DEEBA22EE025700B8BD0A /* SongTableCellModel.swift */; };
 		040DEEBD22EE0CD500B8BD0A /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DEEBC22EE0CD500B8BD0A /* ServerError.swift */; };
+		040DEEC422EE14D200B8BD0A /* UIViewController+hideKeyboardWhenTappedAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DEEC322EE14D200B8BD0A /* UIViewController+hideKeyboardWhenTappedAround.swift */; };
+		040DEEC622EE168700B8BD0A /* InternetConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DEEC522EE168700B8BD0A /* InternetConnectionError.swift */; };
+		040DEEC922EE172400B8BD0A /* Reachabilty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DEEC822EE172400B8BD0A /* Reachabilty.swift */; };
 		D2F0B785D56DEE6569F5C0E0 /* Pods_iTunesAlbums.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AED2BC77031E46376CDEC8 /* Pods_iTunesAlbums.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +127,9 @@
 		040DEEB722EE024D00B8BD0A /* SongTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SongTableViewCell.xib; sourceTree = "<group>"; };
 		040DEEBA22EE025700B8BD0A /* SongTableCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongTableCellModel.swift; sourceTree = "<group>"; };
 		040DEEBC22EE0CD500B8BD0A /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
+		040DEEC322EE14D200B8BD0A /* UIViewController+hideKeyboardWhenTappedAround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboardWhenTappedAround.swift"; sourceTree = "<group>"; };
+		040DEEC522EE168700B8BD0A /* InternetConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionError.swift; sourceTree = "<group>"; };
+		040DEEC822EE172400B8BD0A /* Reachabilty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachabilty.swift; sourceTree = "<group>"; };
 		574D1E8D3933F42BE76778AC /* Pods-iTunesAlbums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAlbums.debug.xcconfig"; path = "Target Support Files/Pods-iTunesAlbums/Pods-iTunesAlbums.debug.xcconfig"; sourceTree = "<group>"; };
 		65E1BDFBA30C2AAB507F9061 /* Pods-iTunesAlbums.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAlbums.release.xcconfig"; path = "Target Support Files/Pods-iTunesAlbums/Pods-iTunesAlbums.release.xcconfig"; sourceTree = "<group>"; };
 		80AED2BC77031E46376CDEC8 /* Pods_iTunesAlbums.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesAlbums.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				040DEE3E22EDB4F300B8BD0A /* Application Libraries */,
+				040DEEC722EE171500B8BD0A /* Network */,
 			);
 			path = "Service Layer";
 			sourceTree = "<group>";
@@ -193,7 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				040DEE8A22EDF2DA00B8BD0A /* Errors */,
-				0401DD3522ECB8C100EC4342 /* Extensions */,
+				040DEEC222EE14BE00B8BD0A /* Extensions */,
 			);
 			path = "Domain Layer";
 			sourceTree = "<group>";
@@ -322,13 +329,6 @@
 			path = "Album List";
 			sourceTree = "<group>";
 		};
-		0401DD3522ECB8C100EC4342 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		040DEE3E22EDB4F300B8BD0A /* Application Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,6 +419,7 @@
 		040DEE8A22EDF2DA00B8BD0A /* Errors */ = {
 			isa = PBXGroup;
 			children = (
+				040DEEC522EE168700B8BD0A /* InternetConnectionError.swift */,
 				040DEEBC22EE0CD500B8BD0A /* ServerError.swift */,
 				040DEE8B22EDF2E900B8BD0A /* TooManyRequestsError.swift */,
 			);
@@ -508,6 +509,22 @@
 				040DEEB722EE024D00B8BD0A /* SongTableViewCell.xib */,
 			);
 			path = "Song Table Cell";
+			sourceTree = "<group>";
+		};
+		040DEEC222EE14BE00B8BD0A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				040DEEC322EE14D200B8BD0A /* UIViewController+hideKeyboardWhenTappedAround.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		040DEEC722EE171500B8BD0A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				040DEEC822EE172400B8BD0A /* Reachabilty.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		465CF5C8E088F10D0BB28A09 /* Pods */ = {
@@ -699,6 +716,7 @@
 				040DEEAB22EDFE8C00B8BD0A /* Song.swift in Sources */,
 				040DEEB122EDFEBE00B8BD0A /* GetSongsResponseModel.swift in Sources */,
 				040DEE4422EDB52200B8BD0A /* CollectionCellModel.swift in Sources */,
+				040DEEC922EE172400B8BD0A /* Reachabilty.swift in Sources */,
 				0401DD0822EC9EC600EC4342 /* AppLocalization.swift in Sources */,
 				040DEE7822EDCB9600B8BD0A /* AlbumRemoteRouter.swift in Sources */,
 				0401DD1A22ECA0FC00EC4342 /* AppDefaults.swift in Sources */,
@@ -707,6 +725,7 @@
 				040DEEAF22EDFEB200B8BD0A /* SongRemoteRouter.swift in Sources */,
 				040DEE4A22EDBA0800B8BD0A /* Album.swift in Sources */,
 				040DEEB822EE024D00B8BD0A /* SongTableViewCell.swift in Sources */,
+				040DEEC422EE14D200B8BD0A /* UIViewController+hideKeyboardWhenTappedAround.swift in Sources */,
 				040DEE9822EDFA5900B8BD0A /* AlbumDetailViewController.swift in Sources */,
 				040DEEA422EDFBE200B8BD0A /* TableSectionModel.swift in Sources */,
 				0401DD0622EC9EAE00EC4342 /* Localizable.swift in Sources */,
@@ -724,6 +743,7 @@
 				0401DD2A22ECA1D200EC4342 /* BasicNavigationController.swift in Sources */,
 				040DEE7D22EDD90200B8BD0A /* GetAlbumsResponseModel.swift in Sources */,
 				0401DCE522EC6A6700EC4342 /* AppDelegate.swift in Sources */,
+				040DEEC622EE168700B8BD0A /* InternetConnectionError.swift in Sources */,
 				040DEEBD22EE0CD500B8BD0A /* ServerError.swift in Sources */,
 				0401DD1222EC9FE600EC4342 /* AppThemeManager.swift in Sources */,
 			);

@@ -54,6 +54,8 @@ class AlbumListViewController: ViperViewController, AlbumListViewInput {
         
         self.activityIndicatorView.type = .ballClipRotatePulse
         self.activityIndicatorView.color = AppTheme.backgroundBar
+        
+        self.hideKeyboardWhenTappedAround()
     }
     
     func setupActions() { }
@@ -100,8 +102,15 @@ extension AlbumListViewController { }
 extension AlbumListViewController: UISearchBarDelegate {
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let text = searchBar.text,
+            !text.isEmpty else {
+                self.show(title: "Напишите название альбома", message: nil, animated: true)
+                return
+        }
+        
         self.view.endEditing(true)
-        self.output?.loadAlbums(text: searchBar.text ?? "")
+        self.output?.loadAlbums(text: text)
+        searchBar.text = ""
     }
     
 }

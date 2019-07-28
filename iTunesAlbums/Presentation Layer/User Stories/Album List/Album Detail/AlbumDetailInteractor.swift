@@ -37,7 +37,11 @@ open class AlbumDetailInteractor: ViperInteractor, AlbumDetailInteractorInput {
         guard let request = SongRemoteRouter.list(albumId: albumId).request else { return }
         
         self.output?.beginLoading()
-        let _: GetSongsResponseModel? = self.execute(request, onSuccess: self.loadSongsSuccess, onError: self.loadSongsError)
+        if Reachability.isConnectedToNetwork() {
+            let _: GetSongsResponseModel? = self.execute(request, onSuccess: self.loadSongsSuccess, onError: self.loadSongsError)
+        } else {
+            self.output?.finishLoading(with: InternetConnectionError())
+        }
     }
     
     // MARK: - Module functions

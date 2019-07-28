@@ -37,6 +37,7 @@ enum AppLocalization {
     
     enum Errors: String, Localizable {
         case tooManyRequests = "ErrorRequestLimit"
+        case internetConnection = "InternetConnectionError"
     }
     
 }
