@@ -63,6 +63,10 @@ class AlbumListPresenter: ViperPresenter, AlbumListPresenterInput, AlbumListView
         }
     }
     
+    func select(album: Album) {
+        _ = self.router?.pushAlbumDetailViewController(album: album)
+    }
+    
     // MARK: - AlbumListInteractorOutput
     func loadAlbumsSuccess(_ albumResponses: [AlbumResponse]) {
         self.viewModel.albums = albumResponses.map({ $0.defaultMapping() })

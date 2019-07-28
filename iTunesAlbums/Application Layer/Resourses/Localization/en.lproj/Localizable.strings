@@ -22,5 +22,8 @@
 "AlbumListTitle" = "Albums";
 "AlbumListSearchBarPlaceholder" = "Enter album name to search";
 
+// MARK: - Подробно об альбоме
+"AlbumDetailTitle" = "Detail";
+
 // MARK: - Ошибки
 "ErrorRequestLimit" = "Too many requests. Please, wait";
