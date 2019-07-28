@@ -70,6 +70,7 @@ class AlbumListPresenter: ViperPresenter, AlbumListPresenterInput, AlbumListView
     // MARK: - AlbumListInteractorOutput
     func loadAlbumsSuccess(_ albumResponses: [AlbumResponse]) {
         self.viewModel.albums = albumResponses.map({ $0.defaultMapping() })
+            .sorted(by: { $0.collectionName.localizedCaseInsensitiveCompare($1.collectionName) == ComparisonResult.orderedAscending })
         self.view?.updateViewState(with: self.viewModel, animated: true)
     }
     
