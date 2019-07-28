@@ -8,4 +8,10 @@
 
 import Foundation
 
-struct Album { }
+struct Album {
+    var artistId: Int
+    var collectionId: Int
+    var artistName: String
+    var collectionName: String
+    var artworkUrl: String
+}
