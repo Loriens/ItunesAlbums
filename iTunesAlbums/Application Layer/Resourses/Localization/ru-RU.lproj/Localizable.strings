@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  iTunesAlbums
+
+  Created by Vladislav on 27/07/2019.
+  Copyright © 2019 Vladislav Markov. All rights reserved.
+*/
+
+// MARK: - Общие выражения
+"OK" = "ОК";
+"Save" = "Сохранить";
+"Cancel" = "Отмена";
+
+// MARK: - Темы и языки
+"AppThemeLight" = "Светлая";
+"AppThemeDark" = "Темная";
+
+"AppLanguageEnglish" = "Английский";
+"AppLanguageRussian" = "Русский";
+
+// MARK: - Список альбомов
+"AlbumListTitle" = "Альбомы";
