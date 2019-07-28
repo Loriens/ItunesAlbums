@@ -28,7 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: - Window configuration
     private func setup(_ window: UIWindow) {
-        let vc = AlbumListConfigurator().configure()
+        let vc = AlbumListAssembly.create()
+        _ = AlbumListAssembly.configure(with: vc)
         
         let nc = BasicNavigationController(rootViewController: vc)
         
@@ -38,4 +39,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
 }
-

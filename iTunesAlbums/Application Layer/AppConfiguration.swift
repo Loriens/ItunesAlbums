@@ -12,9 +12,9 @@ enum AppConfiguration {
     
     static var serverURL: String {
         #if DEBUG
-        return ""
+        return "https://itunes.apple.com/"
         #else
-        return ""
+        return "https://itunes.apple.com/"
         #endif
     }
     

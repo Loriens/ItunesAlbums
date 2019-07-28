@@ -28,6 +28,11 @@ enum AppLocalization {
     
     enum AlbumList: String, Localizable {
         case title = "AlbumListTitle"
+        case searchBarPlaceholder = "AlbumListSearchBarPlaceholder"
+    }
+    
+    enum Errors: String, Localizable {
+        case tooManyRequests = "ErrorRequestLimit"
     }
     
 }
