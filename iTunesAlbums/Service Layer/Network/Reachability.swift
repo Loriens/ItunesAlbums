@@ -1,5 +1,5 @@
 //
-//  Reachabilty.swift
+//  Reachability.swift
 //  iTunesAlbums
 //
 //  Created by Vladislav on 28/07/2019.

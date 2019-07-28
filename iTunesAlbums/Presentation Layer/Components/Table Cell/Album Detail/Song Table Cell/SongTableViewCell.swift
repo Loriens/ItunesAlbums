@@ -18,6 +18,8 @@ class SongTableViewCell: TableCell {
     override func setupView() {
         self.backgroundColor = .clear
         self.contentView.backgroundColor = .clear
+        
+        self.songNameLabel.apply(.songNameStyle())
     }
     
     override func updateViews() {

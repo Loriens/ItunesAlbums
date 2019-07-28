@@ -20,14 +20,14 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fxu-4z-rkr">
-                        <rect key="frame" x="10" y="10" width="80" height="80"/>
+                        <rect key="frame" x="10" y="30.5" width="60" height="60"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="80" id="7Dq-bh-NaI"/>
-                            <constraint firstAttribute="width" constant="80" id="ajg-xO-hdy"/>
+                            <constraint firstAttribute="height" constant="60" id="7Dq-bh-NaI"/>
+                            <constraint firstAttribute="width" constant="60" id="ajg-xO-hdy"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gkx-NQ-Ocr">
-                        <rect key="frame" x="100" y="40" width="290" height="20.5"/>
+                        <rect key="frame" x="80" y="50.5" width="310" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
             <constraints>
                 <constraint firstItem="fxu-4z-rkr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="Jfz-FT-wTa"/>
                 <constraint firstAttribute="trailing" secondItem="gkx-NQ-Ocr" secondAttribute="trailing" constant="10" id="URi-P6-UoM"/>
-                <constraint firstItem="fxu-4z-rkr" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="10" id="gu0-Q1-5Bo"/>
+                <constraint firstItem="fxu-4z-rkr" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="hBq-HO-ieA"/>
                 <constraint firstItem="gkx-NQ-Ocr" firstAttribute="leading" secondItem="fxu-4z-rkr" secondAttribute="trailing" constant="10" id="pCj-Kh-W2e"/>
                 <constraint firstItem="gkx-NQ-Ocr" firstAttribute="centerY" secondItem="fxu-4z-rkr" secondAttribute="centerY" id="vwl-Bg-GPL"/>
             </constraints>

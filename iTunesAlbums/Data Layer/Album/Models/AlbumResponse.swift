@@ -20,7 +20,7 @@ struct AlbumResponse: Codable {
         case collectionId = "collectionId"
         case artistName = "artistName"
         case collectionName = "collectionName"
-        case artworkUrl = "artworkUrl60"
+        case artworkUrl = "artworkUrl100"
     }
     
     public func defaultMapping() -> Album {

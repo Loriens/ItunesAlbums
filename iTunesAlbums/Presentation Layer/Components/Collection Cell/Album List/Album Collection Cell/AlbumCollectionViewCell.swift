@@ -19,7 +19,9 @@ class AlbumCollectionViewCell: CollectionCell {
         return String.className(self)
     }
     
-    override func setupView() { }
+    override func setupView() {
+        self.title.apply(.cellAlbumNameStyle())
+    }
     
     override func updateViews() {
         guard let model = self.model as? AlbumCollectionCellModel else { return }

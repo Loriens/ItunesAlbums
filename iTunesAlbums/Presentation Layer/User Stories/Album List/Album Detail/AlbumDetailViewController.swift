@@ -52,7 +52,9 @@ class AlbumDetailViewController: ViperViewController, AlbumDetailViewInput {
     
     func setupActions() { }
     
-    func applyStyles() { }
+    func applyStyles() {
+        self.albumName.apply(.albumNameStyle())
+    }
     
     // MARK: - AlbumDetailViewInput
     override func setupInitialState(with viewModel: ViperViewModel) {

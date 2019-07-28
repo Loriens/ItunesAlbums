@@ -64,7 +64,8 @@
 		040DEEBD22EE0CD500B8BD0A /* ServerError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DEEBC22EE0CD500B8BD0A /* ServerError.swift */; };
 		040DEEC422EE14D200B8BD0A /* UIViewController+hideKeyboardWhenTappedAround.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DEEC322EE14D200B8BD0A /* UIViewController+hideKeyboardWhenTappedAround.swift */; };
 		040DEEC622EE168700B8BD0A /* InternetConnectionError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DEEC522EE168700B8BD0A /* InternetConnectionError.swift */; };
-		040DEEC922EE172400B8BD0A /* Reachabilty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DEEC822EE172400B8BD0A /* Reachabilty.swift */; };
+		040DEEC922EE172400B8BD0A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DEEC822EE172400B8BD0A /* Reachability.swift */; };
+		040DEECB22EE185C00B8BD0A /* StyleWrapper+UILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040DEECA22EE185C00B8BD0A /* StyleWrapper+UILabel.swift */; };
 		D2F0B785D56DEE6569F5C0E0 /* Pods_iTunesAlbums.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 80AED2BC77031E46376CDEC8 /* Pods_iTunesAlbums.framework */; };
 /* End PBXBuildFile section */
 
@@ -129,7 +130,8 @@
 		040DEEBC22EE0CD500B8BD0A /* ServerError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerError.swift; sourceTree = "<group>"; };
 		040DEEC322EE14D200B8BD0A /* UIViewController+hideKeyboardWhenTappedAround.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboardWhenTappedAround.swift"; sourceTree = "<group>"; };
 		040DEEC522EE168700B8BD0A /* InternetConnectionError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetConnectionError.swift; sourceTree = "<group>"; };
-		040DEEC822EE172400B8BD0A /* Reachabilty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachabilty.swift; sourceTree = "<group>"; };
+		040DEEC822EE172400B8BD0A /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		040DEECA22EE185C00B8BD0A /* StyleWrapper+UILabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StyleWrapper+UILabel.swift"; sourceTree = "<group>"; };
 		574D1E8D3933F42BE76778AC /* Pods-iTunesAlbums.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAlbums.debug.xcconfig"; path = "Target Support Files/Pods-iTunesAlbums/Pods-iTunesAlbums.debug.xcconfig"; sourceTree = "<group>"; };
 		65E1BDFBA30C2AAB507F9061 /* Pods-iTunesAlbums.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iTunesAlbums.release.xcconfig"; path = "Target Support Files/Pods-iTunesAlbums/Pods-iTunesAlbums.release.xcconfig"; sourceTree = "<group>"; };
 		80AED2BC77031E46376CDEC8 /* Pods_iTunesAlbums.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iTunesAlbums.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -273,6 +275,7 @@
 			children = (
 				0401DD1522ECA02700EC4342 /* Stylable.swift */,
 				0401DD1722ECA03600EC4342 /* StyleWrapper.swift */,
+				040DEECA22EE185C00B8BD0A /* StyleWrapper+UILabel.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -522,7 +525,7 @@
 		040DEEC722EE171500B8BD0A /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				040DEEC822EE172400B8BD0A /* Reachabilty.swift */,
+				040DEEC822EE172400B8BD0A /* Reachability.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -699,6 +702,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040DEECB22EE185C00B8BD0A /* StyleWrapper+UILabel.swift in Sources */,
 				040DEEA222EDFBDA00B8BD0A /* TableCellModel.swift in Sources */,
 				0401DD1622ECA02700EC4342 /* Stylable.swift in Sources */,
 				0401DD1822ECA03600EC4342 /* StyleWrapper.swift in Sources */,
@@ -716,7 +720,7 @@
 				040DEEAB22EDFE8C00B8BD0A /* Song.swift in Sources */,
 				040DEEB122EDFEBE00B8BD0A /* GetSongsResponseModel.swift in Sources */,
 				040DEE4422EDB52200B8BD0A /* CollectionCellModel.swift in Sources */,
-				040DEEC922EE172400B8BD0A /* Reachabilty.swift in Sources */,
+				040DEEC922EE172400B8BD0A /* Reachability.swift in Sources */,
 				0401DD0822EC9EC600EC4342 /* AppLocalization.swift in Sources */,
 				040DEE7822EDCB9600B8BD0A /* AlbumRemoteRouter.swift in Sources */,
 				0401DD1A22ECA0FC00EC4342 /* AppDefaults.swift in Sources */,
