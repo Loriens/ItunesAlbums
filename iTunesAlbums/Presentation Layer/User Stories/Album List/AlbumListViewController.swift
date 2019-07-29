@@ -104,7 +104,7 @@ extension AlbumListViewController: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text,
             !text.isEmpty else {
-                self.show(title: "Строка для поиска пуста", message: nil, animated: true)
+                self.show(title: "Строка поиска пуста", message: nil, animated: true)
                 return
         }
         
