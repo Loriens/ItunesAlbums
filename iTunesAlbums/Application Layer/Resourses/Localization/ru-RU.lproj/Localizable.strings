@@ -20,7 +20,7 @@
 
 // MARK: - Список альбомов
 "AlbumListTitle" = "Альбомы";
-"AlbumListSearchBarPlaceholder" = "Введите имя артиста";
+"AlbumListSearchBarPlaceholder" = "Введите строку для поиска";
 
 // MARK: - Подробно об альбоме
 "AlbumDetailTitle" = "Подробно";
